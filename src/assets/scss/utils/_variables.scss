@@ -1,0 +1,27 @@
+$iconPath: './assets/img';
+
+$icon-types: (
+//  Name(fix): Path
+    'enter': $iconPath + '/enter.png',
+    'game': $iconPath + '/game.png',
+    'game-big': $iconPath + '/game-big.png',
+    'wallet': $iconPath + '/wallet.png',
+    'wallet-big': $iconPath + '/wallet-big.png',
+    'sack': $iconPath + '/sack.png',
+    'usd': $iconPath + '/usd.png',
+    'eur': $iconPath + '/eur.png',
+    'rub': $iconPath + '/rub.png',
+    'usd-sm': $iconPath + '/usd-sm.png',
+    'eur-sm': $iconPath + '/eur-sm.png',
+    'rub-sm': $iconPath + '/rub-sm.png',
+    'money': $iconPath + '/money.png',
+    'next': $iconPath + '/next.png',
+    'next-step': $iconPath + '/next-step.png',
+    'confirm': $iconPath + '/confirm.png',
+    'back': $iconPath + '/back.png',
+    'cancel': $iconPath + '/cancel.png',
+);
+
+$defaultHtmlFont: "Tahoma", sans-serif;
+$fontMontserrat: 'Montserratarm';
+$baseFontFamily: $fontMontserrat, $defaultHtmlFont;

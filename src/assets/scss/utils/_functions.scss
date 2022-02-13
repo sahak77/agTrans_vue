@@ -1,0 +1,21 @@
+@function rem($rem, $context: $baseFontSize) {
+  @if (unitless($rem)) {
+      $pixels: $rem * 1;
+  }
+  @if (unitless($context)) {
+      $context: $context * 1;
+  }
+  @return $rem / $context * 1rem;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+//  Convert value to em.
+@function rem($size, $base-font-size: 16px) {
+  @return strip-unit($size) / strip-unit($base-font-size) * 1rem;
+}

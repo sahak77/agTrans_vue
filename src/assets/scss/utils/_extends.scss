@@ -1,0 +1,80 @@
+%flex {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+%align-middle {
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+%align-top {
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+%align-bottom {
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+%align-stretch {
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+%align-between {
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+%align-around {
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+%align-center {
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+%align-left {
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+}
+
+%align-right {
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+}
+
+%justify-stretch {
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+%user-cursor {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+%not-selectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+%hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+%show {
+  visibility: visible;
+  opacity: 1;
+}

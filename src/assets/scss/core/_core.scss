@@ -1,0 +1,56 @@
+@import "../utils/_variables";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $baseFontFamily;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+// Input default style reset
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+}

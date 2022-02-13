@@ -1,0 +1,168 @@
+@import "./assets/scss/utils/_module.scss";
+@import './assets/scss/core/_core.scss';
+@import './assets/scss/core/_fonts.scss';
+@import './assets/scss/core/helpers.scss';
+
+
+
+.header {
+    width: 100%;
+    background-image: url(./assets/img/header.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+@each $name, $path in $icon-types {
+    .#{$name} {
+        span {
+            background-image: url(#{$path});
+        }
+    }
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-top: 52px;
+    
+    span {
+        position: relative;
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%) rotate(-45deg));
+            background-size: contain;
+            background-position: center;
+        }
+
+        &::after {
+            right: 0;
+        }
+
+        &::before {
+            left: 0;
+        }
+    }
+}
+
+.icon-big {
+    position: absolute;
+    
+    span {
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+    }
+}
+
+.form { 
+    &-item {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &-input {
+        input {
+            font-family: $baseFontFamily;
+            width: 100%;
+        }
+    }
+
+    &_phone {
+        .form-input {
+            position: relative;
+
+            // Phone Number Prefix
+            &::after {
+                position: absolute;
+                @include center-absolute(vertical);
+            }
+        }
+    }
+}
+
+.rate-item {
+    @extend %flex;
+    @extend %align-middle;
+    @extend %align-between;
+
+    &-title {
+        span {
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &-value {
+        text-transform: uppercase;
+    }
+}
+
+.cash-bg, .check-bg, .take-money-img .loading-img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.cash-bg {
+    background-image: url(./assets/img/cash-bg.png);
+}
+.check-bg {
+    background-image: url(./assets/img/check-bg.png);
+}
+.take-money-img {
+    display: inline-block;
+    background-image: url(./assets/img/take-money.png);
+}
+
+
+.currency-info-row {
+    @extend %flex;
+    @extend %align-middle;
+}
+
+.currency-info-col {
+    flex: 1 0 auto;
+}
+
+.loading-img {
+    display: inline-block;
+    background-image: url(./assets/img/loading.png);
+    animation: spin 2.5s linear infinite;
+}
+
+.message {
+    .title {
+        span {
+            padding-left: 0;
+            padding-right: 0;
+    
+            &::after {
+                left: 50%;
+                top: 0;
+                @include transform(translateX(-50%) rotate(-45deg));
+            }
+    
+            &::before {
+                left: 50%;
+                @include transform(translateX(-50%) rotate(-45deg));
+                bottom: 0;
+                top: initial;
+            }
+        }
+    }
+}
+
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); 
+    } 
+}
+
+@import './assets/scss/core/_components.scss';

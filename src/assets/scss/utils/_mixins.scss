@@ -1,0 +1,109 @@
+@mixin flex-flow($flex_dir, $flex_wrap) {
+  -ms-flex-flow: $flex_dir $flex_wrap;
+  flex-flow: $flex_dir $flex_wrap;
+}
+
+@mixin flex($grow, $shrink, $basis) {
+  -ms-flex: $grow $shrink $basis;
+  flex: $grow $shrink $basis;
+}
+
+@mixin flex-basis($basis_num) {
+  -ms-flex-basis: $basis_num;
+  flex-basis: $basis_num;
+}
+
+@mixin order($order_num) {
+  -ms-order: $order_num;
+  order: $order_num;
+}
+
+@mixin justify($justify_val) {
+  -ms-flex-pack: $justify_val;
+  justify-content: $justify_val;
+}
+
+@mixin align-items($align_val) {
+  -ms-flex-align: $align_val;
+  align-items: $align_val;
+}
+
+@mixin align-content($align_content_val) {
+  -ms-flex-line-pack: $align_content_val;
+  align-content: $align_content_val;
+}
+
+@mixin align-self($align_self_val) {
+  -ms-align-self: $align_self_val;
+  align-self: $align_self_val;
+}
+
+@mixin transition($prop, $delay, $timing) {
+  -webkit-transition: $prop $delay $timing;
+  -moz-transition: $prop $delay $timing;
+  transition: $prop $delay $timing;
+}
+
+@mixin transform-origin($origin) {
+  -moz-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+@mixin center-absolute($position) {
+  position: absolute;
+
+  @if $position == "vertical" {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else if $position == "horizontal" {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  } @else if $position == "both" {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin placeholderColor($color) {
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color;
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $color;
+  }
+}

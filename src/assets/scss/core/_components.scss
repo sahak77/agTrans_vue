@@ -1,0 +1,331 @@
+// Header Style
+.header {
+    height: 70px;
+}
+
+// Buttons
+.button-l, .button-r {
+    background-color: #2B3C71;
+    border-radius: 43px;
+    color: #fff;
+    height: 86px;
+    width: 350px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 120%;
+    @extend %user-cursor;
+}
+
+// Bottom Navigation Buttons style
+.button-l.navigate-button, .button-r.navigate-button {
+    width: 264px;
+}
+
+// Left Buttons (To reverse change all "left" properties to "right")
+.button-l {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    span {
+        background-position: center left;
+        padding-left: 86px;
+        
+        // TO HIDE BUTTON ICON UNCOMMENT THIS CODE ******************
+        // background-image: none;
+        // padding-left: 0;
+    }
+}
+
+// Right Buttons (To reverse change all "right" properties to "left")
+.button-r {
+    text-align: right;
+
+    span {
+        background-position: center right;
+        padding-right: 86px;
+
+        // TO HIDE BUTTON ICON UNCOMMENT THIS CODE ******************
+        // background-image: none;
+        // padding-right: 0;
+    }
+}
+
+// Title Style
+.title {
+    color: #fff;
+    text-align: center;
+    
+    span {
+        padding: 0 48px;
+        display: inline-block;
+
+        // Title right Decore (remove this part of code if dont want right decore)
+        &::after {
+            width: 10px;
+            height: 10px;
+            background-color: #32CF90;
+        }
+    
+        // =======>
+        
+        // Title left Decore (remove this part of code if dont want left decore)
+        &::before {
+            width: 10px;
+            height: 10px;
+            background-color: #32CF90;
+        }
+        // ========>
+    }
+}
+
+// Big Icon Style
+.icon-big {
+    left: 137px;
+    bottom: 281px;
+    
+    // icon sizes
+    span {
+        width: 206px;
+        height: 206px;
+    }
+}
+
+// Form Style
+.form { 
+    margin-top: 62px;
+    margin-left: 126px;
+    width: 473px;
+
+    // Form item container (label + input)
+    &-item {
+        margin-top: 40px;
+    }
+
+    // Form Label
+    &-label {
+        padding-left: 22px;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #fff;
+
+        // Styles when input focused
+        &.focus {
+            color: #32CF90;
+        }
+    }
+
+    // Form input Parent Div
+    &-input {
+        margin-top: 10px;
+
+        // Form input 
+        input {
+            border: 4px solid #fff;
+            border-radius: 35px;
+            background-color: #fff;
+            height: 70px;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 120%;
+            color: #264C95;
+            padding: 0 32px;
+
+            // input Focus Styles
+            &:focus {
+                border-color: #32CF90;
+            }
+        }
+    }
+
+    // Phone Number Form
+    &_phone {
+        .form-input {
+            // Phone Number Prefix
+            &::after {
+                content: "+374 |";
+                left: 32px;
+                color: #8FA2C8;
+                font-weight: bold;
+                font-size: 26px;
+                line-height: 120%;
+            }
+
+            input {
+                padding-left: 111px;
+            }
+        }
+
+        .subtitle {
+            margin-top: 34px;
+            padding-left: 21px;
+            max-width: 410px;
+        }
+    }
+}
+
+// Exchange styles
+.exchange {
+    max-width: 416px;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+
+    // subtitle inside Exhcnage
+    .subtitle {
+        text-align: center;
+    }
+
+    .rate-item-title {
+        span {
+            padding-left: 50px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Exchange Title Style
+.exchange-title {
+    margin-top: 62px;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+// Common Subtitle
+.subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #fff;
+
+    // Subtitle Highlighted text style
+    span {
+        color: #32CF90;
+    }
+}
+
+// Rate item style
+.rate-item {
+    margin-top: 24px;
+    width: 100%;
+    height: 62px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 43px;
+    padding: 14px 33px 12px 24px;
+    color: #fff;
+}
+
+// Rate item Title with icon style 
+.rate-item-title {
+    span {
+        height: 36px;
+        line-height: 36px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+
+// Rate item Value style 
+.rate-item-value {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+// Cash Baground style
+.cash-bg {
+    margin-top: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 341px;
+    height: 220px;
+}
+
+// Check Baground style
+.check-bg {
+    margin-top: 142px;
+    margin-left: 150px;
+    width: 287px;
+    height: 297px;
+}
+
+// Currency Info style
+.currency-info {
+    max-width: 697px;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Currency Info Col
+.currency-info-col {
+
+    // Spaces between Cols
+    &:nth-child(2) {
+        margin-left: 22px;
+    }
+}
+
+// Loading style
+.loading {
+    text-align: center;
+    margin-top: 185px;
+}
+
+// Loading image
+.loading-img {
+    width: 159px;
+    height: 159px;
+}
+
+// Loading Title style
+.loading-title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 122px;
+}
+
+// Take Money style
+.take-money {
+    text-align: center;
+    margin-top: 135px;
+}
+
+// Take Money image
+.take-money-img {
+    width: 195px;
+    height: 256px;
+}
+
+// Take Money Title style
+.take-money-title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 75px;
+}
+
+// Message Title Style (top and bottom decores same as common title)
+.message {
+    .title {
+        margin-top: 180px;
+        max-width: 382px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 200%;
+
+        span {
+            padding-top: 72px;
+            padding-bottom: 72px;
+        }
+    }
+}
